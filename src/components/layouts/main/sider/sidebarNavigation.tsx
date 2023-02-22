@@ -28,66 +28,66 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
     url: '/',
     icon: <NftIcon />,
   },
-  {
-    title: 'common.medical-dashboard',
-    key: 'medical-dashboard',
-    url: '/medical-dashboard',
-    icon: <DashboardOutlined />,
-  },
-  {
-    title: 'common.apps',
-    key: 'apps',
-    icon: <HomeOutlined />,
-    children: [
-      {
-        title: 'common.feed',
-        key: 'feed',
-        url: '/apps/feed',
-      },
-      {
-        title: 'common.kanban',
-        key: 'kanban',
-        url: '/apps/kanban',
-      },
-    ],
-  },
-  {
-    title: 'common.authPages',
-    key: 'auth',
-    icon: <UserOutlined />,
-    children: [
-      {
-        title: 'common.login',
-        key: 'login',
-        url: '/auth/login',
-      },
-      {
-        title: 'common.signUp',
-        key: 'singUp',
-        url: '/auth/sign-up',
-      },
-      {
-        title: 'common.lock',
-        key: 'lock',
-        url: '/auth/lock',
-      },
-      {
-        title: 'common.forgotPass',
-        key: 'forgotPass',
-        url: '/auth/forgot-password',
-      },
-      {
-        title: 'common.securityCode',
-        key: 'securityCode',
-        url: '/auth/security-code',
-      },
-      {
-        title: 'common.newPassword',
-        key: 'newPass',
-        url: '/auth/new-password',
-      },
-    ],
-  },
+  // {
+  //   title: 'common.medical-dashboard',
+  //   key: 'medical-dashboard',
+  //   url: '/medical-dashboard',
+  //   icon: <DashboardOutlined />,
+  // },
+  // {
+  //   title: 'common.apps',
+  //   key: 'apps',
+  //   icon: <HomeOutlined />,
+  //   children: [
+  //     {
+  //       title: 'common.feed',
+  //       key: 'feed',
+  //       url: '/apps/feed',
+  //     },
+  //     {
+  //       title: 'common.kanban',
+  //       key: 'kanban',
+  //       url: '/apps/kanban',
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: 'common.authPages',
+  //   key: 'auth',
+  //   icon: <UserOutlined />,
+  //   children: [
+  //     {
+  //       title: 'common.login',
+  //       key: 'login',
+  //       url: '/auth/login',
+  //     },
+  //     {
+  //       title: 'common.signUp',
+  //       key: 'singUp',
+  //       url: '/auth/sign-up',
+  //     },
+  //     {
+  //       title: 'common.lock',
+  //       key: 'lock',
+  //       url: '/auth/lock',
+  //     },
+  //     {
+  //       title: 'common.forgotPass',
+  //       key: 'forgotPass',
+  //       url: '/auth/forgot-password',
+  //     },
+  //     {
+  //       title: 'common.securityCode',
+  //       key: 'securityCode',
+  //       url: '/auth/security-code',
+  //     },
+  //     {
+  //       title: 'common.newPassword',
+  //       key: 'newPass',
+  //       url: '/auth/new-password',
+  //     },
+  //   ],
+  // },
   {
     title: 'common.forms',
     key: 'forms',
@@ -100,45 +100,63 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
       },
     ],
   },
+  // {
+  //   title: 'common.dataTables',
+  //   key: 'dataTables',
+  //   url: '/data-tables',
+  //   icon: <TableOutlined />,
+  // },
   {
-    title: 'common.dataTables',
-    key: 'dataTables',
-    url: '/data-tables',
+    title: 'Hub',
+    key: 'Hubs',
+    url: '/hubs',
     icon: <TableOutlined />,
   },
   {
-    title: 'common.charts',
-    key: 'charts',
-    url: '/charts',
-    icon: <LineChartOutlined />,
+    title: 'Visit',
+    key: 'Visites',
+    url: '/visites',
+    icon: <TableOutlined />,
   },
   {
-    title: 'common.maps',
-    key: 'maps',
-    icon: <CompassOutlined />,
-    children: [
-      {
-        title: 'common.googleMap',
-        key: 'google-maps',
-        url: '/maps/google-maps',
-      },
-      {
-        title: 'common.leafletMap',
-        key: 'leaflet-maps',
-        url: '/maps/leaflet-maps',
-      },
-      {
-        title: 'common.reactSimpleMaps',
-        key: 'react-simple-maps',
-        url: '/maps/react-simple-maps',
-      },
-      {
-        title: 'common.pigeonMaps',
-        key: 'pigeon-maps',
-        url: '/maps/pigeon-maps',
-      },
-    ],
+    title: 'Vehicle',
+    key: 'Vehicles',
+    url: '/vehicles',
+    icon: <TableOutlined />,
   },
+  // {
+  //   title: 'common.charts',
+  //   key: 'charts',
+  //   url: '/charts',
+  //   icon: <LineChartOutlined />,
+  // },
+  // {
+  //   title: 'common.maps',
+  //   key: 'maps',
+  //   icon: <CompassOutlined />,
+  //   children: [
+  //     {
+  //       title: 'common.googleMap',
+  //       key: 'google-maps',
+  //       url: '/maps/google-maps',
+  //     },
+  //     {
+  //       title: 'common.leafletMap',
+  //       key: 'leaflet-maps',
+  //       url: '/maps/leaflet-maps',
+  //     },
+  //     {
+  //       title: 'common.reactSimpleMaps',
+  //       key: 'react-simple-maps',
+  //       url: '/maps/react-simple-maps',
+  //     },
+  //     {
+  //       title: 'common.pigeonMaps',
+  //       key: 'pigeon-maps',
+  //       url: '/maps/pigeon-maps',
+  //     },
+  //   ],
+  // },
   {
     title: 'common.pages',
     key: 'pages',

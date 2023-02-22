@@ -11,7 +11,7 @@ export const TreatmentNotFound: React.FC = () => {
     <Card padding="1rem">
       <S.CardBody>
         <S.Image src={notFoundImg} alt="Not found" preview={false} />
-        <S.Text>{t('medical-dashboard.treatmentPlan.noVisits')}</S.Text>
+        <S.Text>{t('medical-dashboard.treatmentPlan.noVisites')}</S.Text>
       </S.CardBody>
     </Card>
   );

@@ -3,11 +3,13 @@ import { Header } from '../../../header/Header';
 import MainSider from '../sider/MainSider/MainSider';
 import MainContent from '../MainContent/MainContent';
 import { MainHeader } from '../MainHeader/MainHeader';
+import { getProfile } from '@app/store/slices/authSlice';
 import * as S from './MainLayout.styles';
 import { Outlet, useLocation } from 'react-router-dom';
 import { MEDICAL_DASHBOARD_PATH, NFT_DASHBOARD_PATH } from '@app/components/router/AppRouter';
 import { useResponsive } from '@app/hooks/useResponsive';
 import { References } from '@app/components/common/References/References';
+import { useAppDispatch } from '@app/hooks/reduxHooks';
 
 const MainLayout: React.FC = () => {
   const [isTwoColumnsLayout, setIsTwoColumnsLayout] = useState(true);
@@ -16,8 +18,10 @@ const MainLayout: React.FC = () => {
   const location = useLocation();
 
   const toggleSider = () => setSiderCollapsed(!siderCollapsed);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
+    dispatch(getProfile('me'));
     setIsTwoColumnsLayout([MEDICAL_DASHBOARD_PATH, NFT_DASHBOARD_PATH].includes(location.pathname) && isDesktop);
   }, [location.pathname, isDesktop]);
 

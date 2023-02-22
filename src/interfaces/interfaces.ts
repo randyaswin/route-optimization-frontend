@@ -24,7 +24,7 @@ export type ChartSeriesData = ChartSeries[];
 
 export type Severity = 'success' | 'error' | 'info' | 'warning';
 
-export type TwoFactorAuthOption = 'email' | 'phone';
+export type TwoFactorAuthOption = 'email' | 'email';
 
 export type CurrencyType = 'USD' | 'ETH' | 'BTC';
 

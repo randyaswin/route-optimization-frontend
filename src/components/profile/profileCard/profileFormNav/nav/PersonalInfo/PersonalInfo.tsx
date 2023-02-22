@@ -23,43 +23,15 @@ import { Dates } from '@app/constants/Dates';
 import { notificationController } from '@app/controllers/notificationController';
 
 interface PersonalInfoFormValues {
-  birthday?: string;
-  lastName: string;
-  country?: string;
-  website: string;
-  city?: string;
-  address2: string;
-  nickName: string;
-  address1: string;
-  sex?: string;
-  facebook: string;
-  language?: string;
-  linkedin: string;
-  zipcode: string;
-  firstName: string;
-  twitter: string;
-  phone: string;
+  lastname: string;
+  firstname: string;
   email: string;
 }
 
 const initialPersonalInfoValues: PersonalInfoFormValues = {
-  firstName: '',
-  lastName: '',
-  nickName: '',
-  sex: undefined,
-  birthday: undefined,
-  language: undefined,
-  phone: '',
+  firstname: '',
+  lastname: '',
   email: '',
-  country: undefined,
-  city: undefined,
-  address1: '',
-  address2: '',
-  zipcode: '',
-  website: '',
-  twitter: '',
-  linkedin: '',
-  facebook: '',
 };
 
 export const PersonalInfo: React.FC = () => {
@@ -72,23 +44,9 @@ export const PersonalInfo: React.FC = () => {
     () =>
       user
         ? {
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email.name,
-            phone: user.phone.number,
-            nickname: user.userName,
-            sex: user.sex,
-            birthday: Dates.getDate(user.birthday),
-            language: user.lang,
-            country: user.country,
-            city: user.city,
-            address1: user.address1,
-            address2: user?.address2,
-            zipcode: user.zipcode,
-            website: user?.website,
-            twitter: user?.socials?.twitter,
-            linkedin: user?.socials?.linkedin,
-            facebook: user?.socials?.facebook,
+            firstname: user.firstname,
+            lastname: user.lastname,
+            email: user.email,
           }
         : initialPersonalInfoValues,
     [user],
@@ -140,73 +98,7 @@ export const PersonalInfo: React.FC = () => {
           </Col>
 
           <Col xs={24} md={12}>
-            <NicknameItem />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <SexItem />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <BirthdayItem />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <LanguageItem />
-          </Col>
-
-          <Col span={24}>
-            <BaseButtonsForm.Item>
-              <BaseButtonsForm.Title>{t('profile.nav.personalInfo.contactInfo')}</BaseButtonsForm.Title>
-            </BaseButtonsForm.Item>
-          </Col>
-
-          <Col xs={24} md={12}>
-            <PhoneItem verified={user?.phone.verified} />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <EmailItem verified={user?.email.verified} />
-          </Col>
-
-          <Col span={24}>
-            <BaseButtonsForm.Item>
-              <BaseButtonsForm.Title>{t('common.address')}</BaseButtonsForm.Title>
-            </BaseButtonsForm.Item>
-          </Col>
-
-          <Col xs={24} md={12}>
-            <CountriesItem />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <CitiesItem />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <AddressItem number={1} />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <AddressItem number={2} />
-          </Col>
-
-          <Col xs={24} md={12}>
-            <ZipcodeItem />
-          </Col>
-
-          <Col span={24}>
-            <BaseButtonsForm.Item>
-              <BaseButtonsForm.Title>{t('profile.nav.personalInfo.otherInfo')}</BaseButtonsForm.Title>
-            </BaseButtonsForm.Item>
-          </Col>
-
-          <Col xs={24} md={12}>
-            <WebsiteItem />
-          </Col>
-
-          <Col span={24}>
-            <SocialLinksItem />
+            <EmailItem />
           </Col>
         </Row>
       </BaseButtonsForm>

@@ -20,6 +20,10 @@ import MedicalDashboardPage from '@app/pages/DashboardPages/MedicalDashboardPage
 const NewsFeedPage = React.lazy(() => import('@app/pages/NewsFeedPage'));
 const KanbanPage = React.lazy(() => import('@app/pages/KanbanPage'));
 const DataTablesPage = React.lazy(() => import('@app/pages/DataTablesPage'));
+const HubsPage = React.lazy(() => import('@app/pages/HubsPage'));
+const HubOpenPage = React.lazy(() => import('@app/pages/HubOpenPage'));
+const VisitesPage = React.lazy(() => import('@app/pages/VisitesPage'));
+const VehiclesPage = React.lazy(() => import('@app/pages/VehiclesPage'));
 const ChartsPage = React.lazy(() => import('@app/pages/ChartsPage'));
 const ServerErrorPage = React.lazy(() => import('@app/pages/ServerErrorPage'));
 const Error404Page = React.lazy(() => import('@app/pages/Error404Page'));
@@ -100,6 +104,11 @@ const NotificationsUI = withLoading(NotificationsUIPage);
 const Skeletons = withLoading(SkeletonsPage);
 
 const DataTables = withLoading(DataTablesPage);
+const Hubs = withLoading(HubsPage);
+const HubOpen = withLoading(HubOpenPage);
+const Visites = withLoading(VisitesPage);
+const Vehicles = withLoading(VehiclesPage);
+
 const Charts = withLoading(ChartsPage);
 
 // Maps
@@ -141,6 +150,10 @@ export const AppRouter: React.FC = () => {
             <Route path="advanced-forms" element={<AdvancedForm />} />
           </Route>
           <Route path="data-tables" element={<DataTables />} />
+          <Route path="hubs" element={<Hubs />} />
+          <Route path="hub/:id" element={<HubOpen />} />
+          <Route path="visites" element={<Visites />} />
+          <Route path="vehicles" element={<Vehicles />} />
           <Route path="charts" element={<Charts />} />
           <Route path="maps">
             <Route path="google-maps" element={<Google />} />

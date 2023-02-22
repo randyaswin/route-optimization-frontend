@@ -9,7 +9,7 @@ import { useMounted } from '@app/hooks/useMounted';
 
 const initialPagination: Pagination = {
   current: 1,
-  pageSize: 4,
+  pageSize: 20,
 };
 
 export const EditableTable: React.FC = () => {

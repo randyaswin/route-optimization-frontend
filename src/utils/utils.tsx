@@ -4,6 +4,9 @@ import { CurrencyType } from '@app/interfaces/interfaces';
 import { Priority } from '@app//constants/enums/priorities';
 import { ReactComponent as ETHIcon } from '@app/assets/icons/eth.svg';
 import { ReactComponent as BTCIcon } from '@app/assets/icons/btc.svg';
+import { Dayjs } from 'dayjs';
+
+export type AppDate = Dayjs;
 
 export const camelize = (string: string): string => {
   return string
@@ -190,4 +193,9 @@ export const hexToHSL = (hex: string): { h: number; s: number; l: number } => {
 
 export const formatNumberWithCommas = (value: number): string => {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+};
+
+export const StringtoDay = (time: string): AppDate => {
+  const day = new Dayjs(time);
+  return day;
 };

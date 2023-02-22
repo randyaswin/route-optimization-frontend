@@ -16,11 +16,16 @@ export const ProfileDropdown: React.FC = () => {
     <Dropdown overlay={<ProfileOverlay />} trigger={['click']}>
       <S.ProfileDropdownHeader as={Row} gutter={[10, 10]} align="middle">
         <Col>
-          <Avatar src={user.imgUrl} alt="User" shape="circle" size={40} />
+          <Avatar
+            src={process.env.REACT_APP_ASSETS_BUCKET + '/avatars/avatar5.webp'}
+            alt="User"
+            shape="circle"
+            size={40}
+          />
         </Col>
         {isTablet && (
           <Col>
-            <H6>{`${user.firstName} ${user.lastName[0]}`}</H6>
+            <H6>{`${user.firstname} ${user.lastname}`}</H6>
           </Col>
         )}
       </S.ProfileDropdownHeader>

@@ -42,16 +42,16 @@ export const Step2: React.FC = () => {
         </Select>
       </BaseForm.Item>
       <BaseForm.Item
-        name="firstName"
-        label={t('common.firstName')}
-        rules={[{ required: true, message: t('forms.stepFormLabels.firstNameError') }]}
+        name="firstname"
+        label={t('common.firstname')}
+        rules={[{ required: true, message: t('forms.stepFormLabels.firstnameError') }]}
       >
         <Input />
       </BaseForm.Item>
       <BaseForm.Item
-        name="lastName"
-        label={t('common.lastName')}
-        rules={[{ required: true, message: t('forms.stepFormLabels.lastNameError') }]}
+        name="lastname"
+        label={t('common.lastname')}
+        rules={[{ required: true, message: t('forms.stepFormLabels.lastnameError') }]}
       >
         <Input />
       </BaseForm.Item>

@@ -598,7 +598,7 @@ export const getEditableTableData = (pagination: Pagination): Promise<EditableTa
             address: `London Park no.4`,
           },
         ],
-        pagination: { ...pagination, total: 16 },
+        pagination: { ...pagination, total: 160 },
       });
     }, 1000);
   });
